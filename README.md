@@ -17,10 +17,10 @@ npm install -D @grpc/proto-loader @grpc/grpc-js
 
 3. Create a  folder named generated in your root directory.
 npm init -y (For package.json)
-npm install --save-dev typescript ts-node  (This adds dev dependency to compile ts code)
 npx tsc --init (Generated tsconfig)
+npm install ts-proto --save-dev
 
-4. Generate TypeScript Code for Server
+5. Generate TypeScript Code for Server
 Run the following command to generate TypeScript stubs:
 npx protoc \
   --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto \
